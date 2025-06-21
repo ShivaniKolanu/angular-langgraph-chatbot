@@ -27,4 +27,6 @@ npx ts-node generate-graph-image.ts
 
 ---
 
-This project demonstrates a simple workflow automation bot with a clear separation between the frontend (Angular) and backend (LangGraph) components. The graph image provides a visual overview of the workflow logic implemented in the backend.
+This project demonstrates a simple workflow automation bot with a clear separation between the frontend (Angular) and backend (LangGraph) components. The graph image below provides a visual overview of the workflow logic implemented in the backend.
+
+![Workflow Graph](langgraph-backend/graph.png)
