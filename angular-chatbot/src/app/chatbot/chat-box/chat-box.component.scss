@@ -1,0 +1,72 @@
+.chat-card {
+  width: 550px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-window {
+  
+  height: auto;
+  max-height: 400px;
+  min-height: 100px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  display: block; // Change from flex to block for proper text wrapping
+  font-size: 1rem; // Use a readable font size
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: #d1e7dd;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background-color: #f8d7da;
+}
+
+.input-field {
+  width: 100%;
+}
+
+mat-list-item.chat-message, .chat-message {
+  max-width: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  display: block !important;
+  padding: 8px 12px !important;
+  box-sizing: border-box !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+mat-list {
+  width: 100% !important;
+  min-width: 0 !important;
+}

@@ -1,0 +1,8 @@
+flowchart TD
+    START --> inputFirstName
+    inputFirstName --> inputLastName
+    inputLastName --> askAge
+    askAge --|age < 18|--> minorNode
+    askAge --|age >= 18|--> majorNode
+    minorNode --> END
+    majorNode --> END

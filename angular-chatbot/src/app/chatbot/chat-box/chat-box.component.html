@@ -1,0 +1,35 @@
+<mat-card class="chat-card">
+  <mat-card-title class="title">
+    <mat-icon color="primary" style="vertical-align: middle; font-size: 2.5rem; margin-right: 10px;">chat</mat-icon>
+    Chatbot
+  </mat-card-title>
+  <mat-card-content>
+    <div class="chat-window" style="max-height: 350px; overflow-y: auto; margin-bottom: 16px;">
+      <mat-list>
+        <mat-list-item *ngFor="let msg of messages" [ngClass]="{ 'user': msg.startsWith('You:'), 'bot': msg.startsWith('Bot:') }" class="chat-message">
+          <mat-icon *ngIf="msg.startsWith('You:')" color="accent" style="margin-right: 8px;">person</mat-icon>
+          <mat-icon *ngIf="msg.startsWith('Bot:')" color="primary" style="margin-right: 8px;">smart_toy</mat-icon>
+          <span>{{ msg }}</span>
+        </mat-list-item>
+      </mat-list>
+    </div>
+
+    <mat-form-field class="input-field" appearance="fill" style="width: 100%;">
+      <mat-label>Type your message</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userInput"
+        (keydown.enter)="sendMessage()"
+        autocomplete="off"
+      />
+      <button mat-icon-button matSuffix color="primary" (click)="sendMessage()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
+
+<!-- Chat button floating icon -->
+<button mat-fab color="primary" class="chat-fab" style="position: fixed; bottom: 32px; right: 32px; z-index: 1000; width: 80px; height: 80px;">
+  <mat-icon style="font-size: 3rem;">chat</mat-icon>
+</button>
