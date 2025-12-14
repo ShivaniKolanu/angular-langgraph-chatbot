@@ -7,7 +7,7 @@ This folder contains the Angular frontend application. It provides a user interf
 
 To start the Angular frontend:
 ```sh
-ng serve
+npm run start
 ```
 
 > **Note:** This project is mainly focused on wiring up Angular with the LangGraph.js concept, not on showcasing advanced Angular skills.
